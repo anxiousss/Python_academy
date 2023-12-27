@@ -1,0 +1,12 @@
+name = input()
+price = int(input())
+weight = int(input())
+money = int(input())
+
+print('================Чек================')
+print('Товар:', name.rjust(35 - 7))
+print('Цена:', f'{weight}кг * {price}руб/кг'.rjust(35 - 6))
+print('Итого:', f'{weight * price}руб'.rjust(35 - 7))
+print('Внесено:', f'{money}руб'.rjust(35 - 9))
+print('Сдача:', f'{money - (weight * price)}руб'.rjust(35 - 7))
+print('===================================')
