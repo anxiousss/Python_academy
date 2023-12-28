@@ -1,0 +1,8 @@
+def to_string(*data, sep=' ', end='\n'):
+    string = ''
+    for word in data:
+        string += str(word) + sep
+
+    string = string[:-len(sep)] + end
+
+    return string
