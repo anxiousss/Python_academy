@@ -8,8 +8,3 @@ def make_equation(*coef):
     current_variable = coef.pop()
     result = f'({make_equation(*coef)}) * x + {current_variable}'
     return result
-
-
-eq = result = make_equation(3, 1, 5, 3)
-
-print(eq)
