@@ -25,7 +25,3 @@ def merge_sort(array):
         sort_array.append(second_half[i])
 
     return sort_array
-
-
-result = merge_sort([3, 1, 5, 3])
-print(result)
