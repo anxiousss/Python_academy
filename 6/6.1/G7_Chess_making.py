@@ -10,7 +10,3 @@ def make_board(Size):
                 board[i][j] = 1
 
     return board
-
-
-print(make_board(6))
-
