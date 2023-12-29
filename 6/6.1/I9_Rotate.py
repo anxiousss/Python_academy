@@ -12,7 +12,3 @@ def rotate(array, deg):
             return np.rot90(array)
         case 360:
             return array
-
-
-print(rotate(np.arange(12).reshape(3, 4), 180))
-

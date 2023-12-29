@@ -23,12 +23,3 @@ def discount(table: pd.DataFrame) -> pd.DataFrame:
         new_table.loc[i, 'cost'] /= 1 + (table.loc[:, 'number'][i] > 2)
 
     return new_table
-
-
-products = ['bread', 'milk', 'soda', 'cream']
-prices = [37, 58, 99, 72]
-price_list = pd.Series(prices, products)
-result = cheque(price_list, soda=3, milk=2, cream=1)
-with_discount = discount(result)
-print(result)
-print(with_discount)

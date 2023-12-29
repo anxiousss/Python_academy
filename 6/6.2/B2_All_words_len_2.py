@@ -15,8 +15,3 @@ def length_stats(text: str) -> tuple[pd.Series, pd.Series]:
     odd_info = pd.Series(odd_stats, dtype='int64')
 
     return odd_info, even_info
-
-
-odd, even = length_stats('Мама мыла раму')
-print(odd)
-print(even)
