@@ -9,7 +9,3 @@ def multiplication_matrix(Size):
         for j in range(0, Size):
             matrix[i][j] = (i + 1) * (j + 1)
     return matrix
-
-
-print(multiplication_matrix(5))
-
