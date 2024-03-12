@@ -29,10 +29,3 @@ class Rectangle:
     def area(self):
 
         return round(self.a * self.b, 2)
-
-
-rect = Rectangle((7.52, -4.3), (3.2, 3.14))
-print(rect.get_pos(), rect.get_size())
-rect.resize(23.5, 11.3)
-print(rect.get_pos(), rect.get_size())
-
