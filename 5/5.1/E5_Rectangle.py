@@ -13,8 +13,3 @@ class Rectangle:
     def area(self):
 
         return round(self.a * self.b, 2)
-
-
-rect = Rectangle((7.52, -4.3), (3.2, 3.14))
-print(rect.area())
-
