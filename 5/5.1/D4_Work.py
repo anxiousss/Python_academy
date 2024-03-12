@@ -20,17 +20,3 @@ class Programmer:
             self.salary += 5
         else:
             self.salary += 1
-
-
-programmer = Programmer('Васильев Иван', 'Junior')
-programmer.work(750)
-print(programmer.info())
-programmer.rise()
-programmer.work(500)
-print(programmer.info())
-programmer.rise()
-programmer.work(250)
-print(programmer.info())
-programmer.rise()
-programmer.work(250)
-print(programmer.info())
