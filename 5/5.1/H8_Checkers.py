@@ -7,20 +7,29 @@ class Cell:
         return self.state
 
 
-class Checkers:
-    cells = ['XBXBXBXB',
-             'BXBXBXBX',
-             'XBXBXBXB',
-             'XXXXXXXX',
-             'XXXXXXXX',
-             'WXWXWXWX',
-             'XWXWXWXW',
-             'WXWXWXWX'][::-1]
+SIZE = 8
 
+
+# noinspection PyMethodMayBeStatic
+class Checkers:
     col_index = 'ABCDEFGH'
 
     def __init__(self):
-        self.cells = [[Cell(cell) for cell in row] for row in Checkers.cells]
+        self.cells = self.create_cells()
+
+    def create_cells(self):
+        board = []
+        for i in range(SIZE):
+            board.append([])
+            for j in range(SIZE):
+                if (i + j) % 2 and i < 3:
+                    board[i].append(Cell('B'))
+                elif (i + j) % 2 and i > 4:
+                    board[i].append(Cell('W'))
+                else:
+                    board[i].append(Cell('X'))
+
+        return board[::-1]
 
     def get_cell(self, position):
         letter, digit = position
@@ -37,3 +46,4 @@ class Checkers:
     def move(self, start_position, final_position):
         self.set_cell(final_position, self.get_cell(start_position).status())
         self.set_cell(start_position, 'X')
+
